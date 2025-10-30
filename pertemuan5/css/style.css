@@ -1,0 +1,60 @@
+/* Mengatur dasar halaman */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container utama yang menggunakan Flexbox */
+.destinasi-container {
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-wrap: wrap; /* Memungkinkan item pindah ke baris baru jika tidak cukup ruang */
+    justify-content: center; /* Memusatkan item secara horizontal */
+    gap: 2rem; /* Memberi jarak antar item */
+}
+
+/* Styling untuk setiap kartu destinasi */
+.destinasi-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Memastikan gambar tidak keluar dari border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Mengatur lebar kartu. flex-basis adalah lebar awal sebelum ada ruang ekstra */
+    flex-basis: 300px; 
+    flex-grow: 1; /* Memungkinkan kartu untuk tumbuh jika ada ruang ekstra */
+    max-width: 350px; /* Lebar maksimum kartu */
+    display: flex;
+    flex-direction: column;
+}
+
+.destinasi-card:hover {
+    transform: translateY(-10px); /* Efek terangkat saat di-hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Styling untuk gambar destinasi */
+.destinasi-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+}
+
+/* Styling untuk konten di dalam kartu */
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Memastikan bagian body ini mengisi sisa ruang di kartu */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    color: #555;
+    flex-grow: 1; /* Mendorong judul ke atas */
+}
