@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         // Opsional: Menampilkan alert untuk memberitahu user
-        alert(`Halo, ${fullName}! Hasil penilaian Anda telah dicatat di console.`);
+        alert(`Halo, ${fullName}! \n Nilai anda adalah ${nilaiAngka} (${nilaiHuruf}).\n Hasil penilaian Anda telah dicatat di console.`);
     });
 });
